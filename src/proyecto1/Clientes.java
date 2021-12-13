@@ -21,7 +21,7 @@ public class Clientes {
         this.genero = genero;
     }
     
-    public String Ver_Informacion(){
+    public String Mostrar_Informacion(){
         String chain = ("dpi:"+this.dpi+"\n"
                 + "nit:"+this.nit+"\n"
                 + "nombre:"+this.nombre+"\n"
