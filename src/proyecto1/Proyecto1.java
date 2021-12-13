@@ -9,7 +9,7 @@ package proyecto1;
  *
  * @author WINDOWS 10
  */
-public class Proyecto1 {
+public class Principal {
 
     /**
      * @param args the command line arguments
