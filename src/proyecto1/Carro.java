@@ -13,7 +13,7 @@ public class Carro {
         this.precio = precio;
     }
 
-    public String Ver_Informacion() {
+    public String Mostrar_Informacion() {
         String cadena = ("VIN:" + this.vin + "\n"
                 + "Fabricante:" + this.fabricante + "\n"
                 + "Modelo:" + this.modelo + "\n"
