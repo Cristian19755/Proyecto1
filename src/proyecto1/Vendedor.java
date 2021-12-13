@@ -5,7 +5,7 @@ public class Vendedor {
     private int dpi, ventas;
     private String nombre, genero, password, correo;
 
-    public Vendedor(int dpi, int ventas, String nombre, String genero, String password) {
+    public Vendedor(int dpi, int ventas, String nombre, String genero, String correo, String password) {
         this.dpi = dpi;
         this.nombre = nombre;
         this.ventas = ventas;        
