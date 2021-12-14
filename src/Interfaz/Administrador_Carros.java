@@ -29,7 +29,7 @@ import javax.swing.JFrame;
  */
 public class Administrador_Carros extends javax.swing.JFrame {
 
-    private String[] nombre = {"Nombre","Edad","Carnet","Grado","Genero"};
+    private String[] nombre = {"VIN", "FABRICANTE", "MODELO", "AÑO", "PRECIO"};
     private String[][] valores;
     private JFrame ventana;
     private Controlador controlador;
@@ -65,18 +65,18 @@ public class Administrador_Carros extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
         JRuta = new javax.swing.JTextField();
-        JNombre = new javax.swing.JTextField();
-        JCarnet = new javax.swing.JTextField();
+        JVIN = new javax.swing.JTextField();
+        JFABRICANTE = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        JGrado = new javax.swing.JTextField();
-        JEdad = new javax.swing.JTextField();
+        JMODELO = new javax.swing.JTextField();
+        JAÑO = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        JPRECIO = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -167,9 +167,9 @@ public class Administrador_Carros extends javax.swing.JFrame {
 
         jLabel3.setText("Ruta:");
 
-        JNombre.addActionListener(new java.awt.event.ActionListener() {
+        JVIN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JNombreActionPerformed(evt);
+                JVINActionPerformed(evt);
             }
         });
 
@@ -207,9 +207,9 @@ public class Administrador_Carros extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        JPRECIO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                JPRECIOActionPerformed(evt);
             }
         });
 
@@ -241,22 +241,22 @@ public class Administrador_Carros extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(JNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                                    .addComponent(JCarnet))
+                                    .addComponent(JVIN, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                                    .addComponent(JFABRICANTE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(JGrado, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(JMODELO, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(JEdad)))
+                                        .addComponent(JAÑO)))
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(JPRECIO, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(JRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -275,18 +275,18 @@ public class Administrador_Carros extends javax.swing.JFrame {
                         .addGap(25, 25, 25)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
-                            .addComponent(JNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JVIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4)
-                            .addComponent(JGrado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JMODELO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JPRECIO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(JCarnet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(JFABRICANTE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel5)
-                                .addComponent(JEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(JAÑO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jButton1)
@@ -314,12 +314,12 @@ public class Administrador_Carros extends javax.swing.JFrame {
     private void JButton_CargaMasivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_CargaMasivaActionPerformed
         try{
             String url = this.JRuta.getText();
-            this.controlador.Cargar_Json_Alumnos(url);
+            this.controlador.Cargar_Json_Carros(url);
         }catch(Exception e){
             JOptionPane.showMessageDialog(this,"Complete todos los campos");
         }
         
-        String [][] matriz = this.controlador.matriz_Alumnos();
+        String [][] matriz = this.controlador.matriz_Carros();
         DefaultTableModel modelo = new DefaultTableModel(matriz,this.nombre);
         this.jTable1.setModel(modelo);
     }//GEN-LAST:event_JButton_CargaMasivaActionPerformed
@@ -327,12 +327,12 @@ public class Administrador_Carros extends javax.swing.JFrame {
     private void JButtonCargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonCargaActionPerformed
         
         try{
-            String nombre = this.JNombre.getText();
-            String carnet = this.JCarnet.getText();
-            int edad = Integer.parseInt(this.JEdad.getText());
-            int grado = Integer.parseInt(this.JGrado.getText());
-            String genero = String.valueOf(this.jComboBox1.getSelectedItem());
-            this.controlador.Cargar_Alumnos(nombre, carnet, genero, edad, grado);
+            int VIN = Integer.parseInt(this.JVIN.getText());
+            String FABRICANTE = this.JFABRICANTE.getText();
+            String MODELO = this.JMODELO.getText();
+            int AÑO = Integer.parseInt(this.JAÑO.getText());
+            int PRECIO = Integer.parseInt(this.JPRECIO.getText());
+            this.controlador.Cargar_Carros(VIN, FABRICANTE, MODELO, AÑO, PRECIO);
         }catch(Exception e){
             JOptionPane.showMessageDialog(this,"Complete todos los campos");
         }
@@ -348,14 +348,14 @@ public class Administrador_Carros extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void JNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JNombreActionPerformed
+    private void JVINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JVINActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JNombreActionPerformed
+    }//GEN-LAST:event_JVINActionPerformed
 
     private void JGraficarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JGraficarActionPerformed
-        JFreeChart graficar = this.controlador.Graficar_Alumnos();
+        JFreeChart graficar = this.controlador.Graficar_Carros();
         ChartPanel panel = new ChartPanel(graficar);
-        JFrame ventana = new JFrame("Genero_Alumnos");
+        JFrame ventana = new JFrame("Fabricantes");
         ventana.getContentPane().add(panel);
         ventana.pack();
         ventana.setVisible(true);
@@ -376,8 +376,8 @@ public class Administrador_Carros extends javax.swing.JFrame {
         int fila = this.jTable1.getSelectedRow();
         if(fila != -1){
             if(this.controlador.eliminar(fila)){
-                JOptionPane.showMessageDialog(this,"Alumno eliminado con exito");
-                String [][] matriz = this.controlador.matriz_Alumnos();
+                JOptionPane.showMessageDialog(this,"Carro eliminado con exito");
+                String [][] matriz = this.controlador.matriz_Carros();
                 DefaultTableModel modelo = new DefaultTableModel(matriz,this.nombre);
                 this.jTable1.setModel(modelo);
         }
@@ -388,20 +388,20 @@ public class Administrador_Carros extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        String nombre = JOptionPane.showInputDialog("Ingrese el nuevo nombre");
-        String carnet = JOptionPane.showInputDialog("Ingrese el nuevo carnet");
-        String genero = JOptionPane.showInputDialog("Ingrese el nuevo genero");
-        String grado = JOptionPane.showInputDialog("Ingrese el nuevo grado");
-        String edad = JOptionPane.showInputDialog("Ingrese la nueva edad");
-        this.controlador.modificar(this.jTable1.getSelectedRow(), nombre, carnet, genero,Integer.parseInt(edad),Integer.parseInt(grado));
-        String [][] matriz = this.controlador.matriz_Alumnos();
+        int VIN = JOptionPane.showInputDialog("Ingrese el nuevo VIN");
+        String FABRICANTE = JOptionPane.showInputDialog("Ingrese el nuevo fabricante");
+        String MODELO = JOptionPane.showInputDialog("Ingrese el nuevo modelo");
+        int AÑO = JOptionPane.showInputDialog("Ingrese el nuevo año");
+        int PRECIO = JOptionPane.showInputDialog("Ingrese el nuevo precio");
+        this.controlador.modificar(this.jTable1.getSelectedRow(), Integer.parseInt(VIN), FABRICANTE, MODELO,Integer.parseInt(AÑO),Integer.parseInt(PRECIO));
+        String [][] matriz = this.controlador.matriz_Carros();
         DefaultTableModel modelo = new DefaultTableModel(matriz,this.nombre);
         this.jTable1.setModel(modelo);
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void JPRECIOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JPRECIOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_JPRECIOActionPerformed
 
     /**
      * @param args the command line arguments
@@ -440,14 +440,15 @@ public class Administrador_Carros extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField JAÑO;
     private javax.swing.JButton JButtonCarga;
     private javax.swing.JButton JButton_CargaMasiva;
-    private javax.swing.JTextField JCarnet;
-    private javax.swing.JTextField JEdad;
-    private javax.swing.JTextField JGrado;
+    private javax.swing.JTextField JFABRICANTE;
     private javax.swing.JButton JGraficar;
-    private javax.swing.JTextField JNombre;
+    private javax.swing.JTextField JMODELO;
+    private javax.swing.JTextField JPRECIO;
     private javax.swing.JTextField JRuta;
+    private javax.swing.JTextField JVIN;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -460,6 +461,5 @@ public class Administrador_Carros extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
