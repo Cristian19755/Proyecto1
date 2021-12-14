@@ -18,7 +18,7 @@ public class Administrador_Vendedores extends javax.swing.JFrame {
 
     private JFrame ventana;
     private Controlador controlador;
-    private String [] nombres = {"Nombre","Dpi","Correo","Password","Edad"};
+    private String [] nombres = {"Dpi","Nombre","Correo","ventas","Genero"};
     /**
      * Creates new form Administrador_Vendedores
      */
@@ -280,7 +280,7 @@ public class Administrador_Vendedores extends javax.swing.JFrame {
     private void JButton_CargaMasivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton_CargaMasivaActionPerformed
         try{
             String ruta = this.JRuta.getText();
-            this.controlador.Cargar_Json_Profesor(ruta);
+            this.controlador.Cargar_Json_Vendedor(ruta);
             this.Cargar_Tabla();
         }catch(Exception e){
             
@@ -317,15 +317,15 @@ public class Administrador_Vendedores extends javax.swing.JFrame {
     }//GEN-LAST:event_JNombreActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        String nombre = JOptionPane.showInputDialog("Ingrese el nuevo nombre");
-        String correo = JOptionPane.showInputDialog("Ingrese el nuevo correo");
-        String password = JOptionPane.showInputDialog("Ingrese la nueva contraseña");
-        int dpi = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el nuevo dpi"));
-        int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la nueva edad"));
+        int Dpi = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el nuevo Dpi"));
+        String Nombre = JOptionPane.showInputDialog("Ingrese el nuevo Nombre");
+        int Ventas = Integer.parseInt(JOptionPane.showInputDialog("Ingrese las nuevas Ventas"));
+        String Correo = JOptionPane.showInputDialog("Ingrese el nuevo Correo");
+        String Genero = JOptionPane.showInputDialog("Ingrese el nuevo Genero");
         int fila = this.jTable1.getSelectedRow();
         
         if(fila != -1){
-            this.controlador.modificar_profesor(fila, nombre, correo, password, dpi, edad);
+            this.controlador.modificar_vendedor(Dpi, Nombre, Ventas, Correo, Genero);
             JOptionPane.showMessageDialog(this,"Modificado correctamente");
             this.Cargar_Tabla();
         }else{
@@ -335,13 +335,12 @@ public class Administrador_Vendedores extends javax.swing.JFrame {
 
     private void JButtonCargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonCargaActionPerformed
         try{
-            String nombre = this.JNombre.getText();
-            String Dpi = this.JDpi.getText(); 
-            String edad = this.JEdad.getText();
-            String password = this.JPassword.getText();
+            String Dpi = this.JNombre.getText();
+            String Nombre = this.JDpi.getText(); 
+            String Ventas = this.JPassword.getText();
             String correo = this.JCorreo.getText();
-            this.controlador.Cargar_Profesores(nombre, correo, password,Integer.parseInt(Dpi),Integer.parseInt(edad));
-            this.controlador.info_profesor();
+            this.controlador.Cargar_Profesores(Dpi, Nombre, Ventas,correo);
+            this.controlador.info_vendedor();
             this.Cargar_Tabla();
         }catch(Exception e){
             JOptionPane.showMessageDialog(this,"Llene los campos");
